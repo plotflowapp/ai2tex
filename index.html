@@ -12,6 +12,10 @@
 
 <link rel="icon" href="assets/logo-light.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
+<link
+  rel="stylesheet"
+  href="https://sibforms.com/forms/end-form/build/sib-styles.css"
+>
 </head>
 
 
@@ -478,65 +482,112 @@
     </div>
 
 
-    <div class="email">
+   <div class="email">
+
+  <div id="sib-form-container" class="sib-form-container">
+
+    <!-- Error -->
+    <div id="error-message"
+         class="sib-form-message-panel"
+         role="alert">
+      <div class="sib-form-message-panel__text">
+        Something went wrong. Please try again.
+      </div>
+    </div>
+
+    <!-- Success -->
+    <div id="success-message"
+         class="sib-form-message-panel"
+         role="status">
+      <div class="sib-form-message-panel__text">
+        <strong>Check your email.</strong><br>
+        We've sent you a confirmation link. Click it to confirm that you'd like
+        to receive notifications about new tools and products.
+      </div>
+    </div>
+
+    <div id="sib-container" class="sib-container">
 
       <form
         id="sib-form"
         method="POST"
         action="https://bb0e4446.sibforms.com/serve/MUIFADQ187X6BZ2CYN0jaoVft4nykrxQxyWn6cYfE_1GCiZbPI3h62pEUKN2qA17ZeZhsiv5QgfLhsUdt-itrj6-jcw4_4lx9CpMTcUTWqKpTQVwbwhR9dT8EetbVxxxA2qWoDfX5962d-2M1NIiGCYiR2AEPOoaHLwodsPH00kIl6E111HXfkzBx4r4m2wmlsTiFbfN1ZaOknqJxQ=="
+        data-type="subscription"
       >
 
-        <label for="EMAIL">Email address</label>
+        <div class="ai2tex-email-row">
 
-        <div class="email-row">
+          <div class="entry__field">
 
-          <input
-            id="EMAIL"
-            name="EMAIL"
-            type="email"
-            placeholder="you@example.com"
-            autocomplete="email"
-            required
+            <label class="entry__label" for="EMAIL">
+              Email address
+            </label>
+
+            <input
+              class="input"
+              type="email"
+              id="EMAIL"
+              name="EMAIL"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            >
+
+            <div class="entry__error entry__error--primary"></div>
+
+          </div>
+
+          <button
+            class="btn primary"
+            type="submit"
           >
-
-          <button class="btn primary" type="submit">
             Notify me
           </button>
 
         </div>
 
+        <div class="entry__choice">
 
-        <label class="consent">
+          <label>
+            <input
+              type="checkbox"
+              id="OPT_IN"
+              name="OPT_IN"
+              value="1"
+              required
+            >
 
-          <input
-            type="checkbox"
-            id="OPT_IN"
-            name="OPT_IN"
-            value="1"
-            required
-          >
+            <span>
+              Notify me about new tools and products
+            </span>
+          </label>
 
-          <span>
-            Notify me about new tools and products.
-          </span>
-
-        </label>
-
+        </div>
 
         <p class="fine">
           Optional. You can unsubscribe at any time.
           <a href="privacy.html">Privacy Policy</a>
         </p>
 
+        <!-- GDPR / Brevo declaration -->
+        <div class="sib-form__declaration">
+          <p>
+            By submitting this form, you agree to receive occasional
+            notifications about new tools and products. Your data will be
+            processed according to our
+            <a href="privacy.html">Privacy Policy</a>.
+          </p>
+        </div>
 
+        <!-- Honeypot -->
         <input
-  type="text"
-  name="email_address_check"
-  value=""
-  tabindex="-1"
-  autocomplete="off"
-  style="display:none !important;"
->
+          type="text"
+          name="email_address_check"
+          value=""
+          tabindex="-1"
+          autocomplete="off"
+          style="display:none !important;"
+        >
 
         <input type="hidden" name="locale" value="en">
         <input type="hidden" name="html_type" value="simple">
@@ -544,6 +595,10 @@
       </form>
 
     </div>
+
+  </div>
+
+</div>
 
   </div>
 
@@ -677,7 +732,7 @@
 
 
 <script src="script.js"></script>
-
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body>
 </html>
 ```

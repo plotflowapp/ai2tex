@@ -1019,4 +1019,176 @@ tr:last-child td {
     width: 250px;
   }
 }
-```
+```css
+/* =========================
+   BREVO FORM
+   ========================= */
+
+#sib-form-container {
+  width: 100%;
+}
+
+#sib-container {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+#sib-form {
+  font-family: inherit !important;
+}
+
+#sib-form .entry__label {
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: var(--text) !important;
+  margin-bottom: 8px !important;
+}
+
+#sib-form input[type="email"] {
+  width: 100% !important;
+  min-height: 48px !important;
+  padding: 13px 15px !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  color: var(--text) !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  box-sizing: border-box !important;
+}
+
+#sib-form input[type="email"]:focus {
+  outline: none !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(53, 81, 109, 0.10) !important;
+}
+
+#sib-form .entry__field {
+  border: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+#sib-form button {
+  font-family: inherit !important;
+}
+
+#sib-form .entry__choice {
+  font-size: 14px !important;
+  color: var(--text-light) !important;
+}
+
+#sib-form .entry__choice label {
+  color: var(--text-light) !important;
+}
+
+#sib-form a {
+  color: var(--primary) !important;
+}
+
+#success-message {
+  margin-bottom: 0 !important;
+  padding: 20px 22px !important;
+}
+
+#success-message strong {
+  color: var(--text) !important;
+}
+
+#error-message {
+  border-radius: 14px !important;
+}
+
+/* Hide Brevo branding/footer inside the embedded form */
+.sib-form .sib-form-block__form-footer {
+  display: none !important;
+}
+/* =========================
+   AI2TEX BREVO LAYOUT
+   ========================= */
+
+.ai2tex-email-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.ai2tex-email-row .entry__field {
+  flex: 1;
+  min-width: 0;
+}
+
+.ai2tex-email-row .entry__label {
+  display: block !important;
+  margin-bottom: 8px !important;
+}
+
+.ai2tex-email-row button {
+  flex: 0 0 auto;
+  min-height: 48px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#sib-form .entry__choice {
+  margin-top: 18px !important;
+}
+
+#sib-form .entry__choice label {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+#sib-form .entry__choice input {
+  margin-top: 4px;
+  flex: 0 0 auto;
+}
+
+.sib-form__declaration {
+  margin-top: 14px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-light);
+}
+
+.sib-form__declaration p {
+  margin: 0;
+}
+
+.sib-form__declaration a {
+  text-decoration: underline;
+}
+
+#success-message,
+#error-message {
+  margin-bottom: 20px !important;
+  padding: 18px 20px !important;
+  border-radius: 12px !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+#success-message .sib-form-message-panel__text,
+#error-message .sib-form-message-panel__text {
+  font-family: inherit !important;
+}
+
+@media (max-width: 700px) {
+
+  .ai2tex-email-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ai2tex-email-row button {
+    width: 100%;
+  }
+
+}
+

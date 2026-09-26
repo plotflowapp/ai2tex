@@ -1,4 +1,5 @@
-*, :before, :after {
+```css
+*, *:before, *:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -287,9 +288,6 @@ p {
   margin-bottom: 22px;
 }
 
-
-/* Two real screenshots */
-
 .models {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr);
@@ -427,7 +425,28 @@ p {
   font-size: 24px;
 }
 
-.ui,
+
+/* =========================
+   WORKFLOW IMAGE
+   ========================= */
+
+.workflow-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.workflow-image img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 620px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.10);
+}
+
+
 .scope,
 .email {
   background: #fff;
@@ -435,45 +454,6 @@ p {
   border-radius: 22px;
   padding: 28px;
   box-shadow: var(--shadow-medium);
-}
-
-.ui-head {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 18px;
-  border-bottom: 1px solid var(--border);
-}
-
-.ui-head b {
-  font-size: 18px;
-}
-
-.ui-head span {
-  color: var(--success);
-  font-weight: 700;
-}
-
-.ui-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 0;
-  border-bottom: 1px solid #EEF2F6;
-  font-size: 14px;
-}
-
-.ui-row span {
-  color: var(--text-light);
-}
-
-.fake {
-  margin-top: 20px;
-  background: var(--primary);
-  color: #fff;
-  text-align: center;
-  border-radius: 12px;
-  padding: 12px;
-  font-weight: 700;
-  font-size: 13px;
 }
 
 .cards {
@@ -783,7 +763,7 @@ p {
 
 .docs-layout {
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 250px minmax(0, 1fr);
   gap: 70px;
   padding-top: 75px;
   padding-bottom: 120px;
@@ -812,6 +792,10 @@ p {
 
 .toc a:hover {
   color: var(--primary);
+}
+
+.doc {
+  min-width: 0;
 }
 
 .doc section {
@@ -848,6 +832,11 @@ p {
   font-size: 16px;
   color: var(--text);
   margin: 9px 0;
+  overflow-wrap: break-word;
+}
+
+.doc p {
+  overflow-wrap: break-word;
 }
 
 .table-wrap {
@@ -886,12 +875,14 @@ tr:last-child td {
 
 .step {
   display: grid;
-  grid-template-columns: 38px 1fr;
+  grid-template-columns: 38px minmax(0, 1fr);
   gap: 15px;
   align-items: start;
   padding: 18px 0;
   border-top: 1px solid var(--border);
   font-size: 15px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
 }
 
 .step strong {
@@ -903,6 +894,7 @@ tr:last-child td {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .note {
@@ -1048,13 +1040,6 @@ tr:last-child td {
     transform: rotate(90deg);
   }
 
-  /*
-     Hero screenshots become vertical:
-     BEFORE
-       ↓
-     AFTER
-  */
-
   .models {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -1124,3 +1109,4 @@ tr:last-child td {
     width: 250px;
   }
 }
+```

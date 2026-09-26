@@ -1,0 +1,116 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Email confirmed — ai2tex</title>
+
+  <link rel="icon" href="assets/logo-light.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    .confirmation-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      background: var(--background);
+    }
+
+    .confirmation-box {
+      width: 100%;
+      max-width: 620px;
+      padding: 56px 48px;
+      text-align: center;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+    }
+
+    .confirmation-mark {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eef5f2;
+      color: #35516D;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .confirmation-box .eyebrow {
+      margin-bottom: 12px;
+    }
+
+    .confirmation-box h1 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 44px);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .confirmation-box .body {
+      max-width: 480px;
+      margin: 20px auto 32px;
+    }
+
+    .confirmation-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    @media (max-width: 600px) {
+
+      .confirmation-box {
+        padding: 42px 24px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <main class="confirmation-page">
+
+    <div class="confirmation-box">
+
+      <div class="confirmation-mark">✓</div>
+
+      <div class="eyebrow">EMAIL CONFIRMED</div>
+
+      <h1>You’re all set.</h1>
+
+      <p class="body">
+        Your email has been confirmed successfully.
+        We’ll let you know when a new tool or major product is released.
+      </p>
+
+      <a class="btn primary large" href="index.html">
+        Back to ai2tex
+      </a>
+
+      <div class="confirmation-note">
+        No regular newsletter. Just occasional updates about new tools and products.
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
+```

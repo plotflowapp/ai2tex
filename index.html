@@ -1,4 +1,3 @@
-```html
 <!doctype html>
 <html lang="en">
 
@@ -462,6 +461,10 @@
      OPTIONAL EMAIL
      ========================= -->
 
+<!-- =========================
+     OPTIONAL EMAIL
+     ========================= -->
+
 <section class="section">
 
   <div class="container two">
@@ -480,128 +483,240 @@
     </div>
 
 
-   <div class="email">
+    <div class="email">
 
-  <div id="sib-form-container" class="sib-form-container">
+      <!-- Begin Brevo Form -->
 
-    <!-- Error -->
-    <div id="error-message"
-         class="sib-form-message-panel"
-         role="alert">
-      <div class="sib-form-message-panel__text">
-        Something went wrong. Please try again.
-      </div>
-    </div>
-
-    <!-- Success -->
-    <div id="success-message"
-         class="sib-form-message-panel"
-         role="status">
-      <div class="sib-form-message-panel__text">
-        <strong>Check your email.</strong><br>
-        We've sent you a confirmation link. Click it to confirm that you'd like
-        to receive notifications about new tools and products.
-      </div>
-    </div>
-
-    <div id="sib-container" class="sib-container">
-
-      <form
-        id="sib-form"
-        method="POST"
-        action="https://bb0e4446.sibforms.com/serve/MUIFADQ187X6BZ2CYN0jaoVft4nykrxQxyWn6cYfE_1GCiZbPI3h62pEUKN2qA17ZeZhsiv5QgfLhsUdt-itrj6-jcw4_4lx9CpMTcUTWqKpTQVwbwhR9dT8EetbVxxxA2qWoDfX5962d-2M1NIiGCYiR2AEPOoaHLwodsPH00kIl6E111HXfkzBx4r4m2wmlsTiFbfN1ZaOknqJxQ=="
-        data-type="subscription"
+      <div
+        class="sib-form"
+        style="text-align:left;background-color:transparent;padding:0!important;"
       >
 
-        <div class="ai2tex-email-row">
+        <div id="sib-form-container" class="sib-form-container">
 
-          <div class="entry__field">
+          <!-- Error message -->
 
-            <label class="entry__label" for="EMAIL">
-              Email address
-            </label>
+          <div
+            id="error-message"
+            class="sib-form-message-panel"
+            role="alert"
+          >
 
-            <input
-              class="input"
-              type="email"
-              id="EMAIL"
-              name="EMAIL"
-              autocomplete="email"
-              placeholder="you@example.com"
-              required
-            >
+            <div class="sib-form-message-panel__text">
 
-            <div class="entry__error entry__error--primary"></div>
+              <span class="sib-form-message-panel__inner-text">
+                Something went wrong. Please try again.
+              </span>
+
+            </div>
 
           </div>
 
-          <button
-            class="btn primary"
-            type="submit"
+
+          <!-- Success message -->
+
+          <div
+            id="success-message"
+            class="sib-form-message-panel"
+            role="status"
           >
-            Notify me
-          </button>
 
-        </div>
+            <div class="sib-form-message-panel__text">
 
-        <div class="entry__choice">
+              <span class="sib-form-message-panel__inner-text">
+                <strong>Check your email.</strong><br>
+                We've sent you a confirmation link. Click it to confirm that
+                you'd like to receive notifications about new tools and products.
+              </span>
 
-          <label>
-            <input
-              type="checkbox"
-              id="OPT_IN"
-              name="OPT_IN"
-              value="1"
-              required
+            </div>
+
+          </div>
+
+
+          <div
+            id="sib-container"
+            class="sib-container sib-container--medium sib-container--vertical"
+            style="
+              text-align:left;
+              background-color:transparent;
+              max-width:none;
+              border:0;
+              padding:0!important;
+            "
+          >
+
+            <form
+              id="sib-form"
+              method="POST"
+              action="https://bb0e4446.sibforms.com/serve/MUIFADQ187X6BZ2CYN0jaoVft4nykrxQxyWn6cYfE_1GCiZbPI3h62pEUKN2qA17ZeZhsiv5QgfLhsUdt-itrj6-jcw4_4lx9CpMTcUTWqKpTQVwbwhR9dT8EetbVxxxA2qWoDfX5962d-2M1NIiGCYiR2AEPOoaHLwodsPH00kIl6E111HXfkzBx4r4m2wmlsTiFbfN1ZaOknqJxQ=="
+              data-type="subscription"
             >
 
-            <span>
-              Notify me about new tools and products
-            </span>
-          </label>
+              <!-- Email -->
+
+              <div class="sib-form-block">
+
+                <div class="form__entry entry_block">
+
+                  <div class="form__label-row">
+
+                    <div class="entry__field">
+
+                      <label
+                        class="entry__label"
+                        for="EMAIL"
+                      >
+                        Email address
+                      </label>
+
+                      <input
+                        class="input"
+                        type="email"
+                        id="EMAIL"
+                        name="EMAIL"
+                        autocomplete="email"
+                        placeholder="you@example.com"
+                        data-required="true"
+                        required
+                      >
+
+                    </div>
+
+                  </div>
+
+
+                  <label
+                    class="entry__error entry__error--primary"
+                  ></label>
+
+                </div>
+
+              </div>
+
+
+              <!-- Checkbox -->
+
+              <div class="sib-form-block">
+
+                <div class="form__entry entry_block">
+
+                  <div class="entry__choice">
+
+                    <label>
+
+                      <input
+                        type="checkbox"
+                        id="OPT_IN"
+                        name="OPT_IN"
+                        value="1"
+                        required
+                      >
+
+                      <span>
+                        Notify me about new tools and products
+                      </span>
+
+                    </label>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <!-- Submit button -->
+
+              <div class="sib-form-block">
+
+                <button
+                  class="sib-form-block__button sib-form-block__button-with-loader btn primary"
+                  form="sib-form"
+                  type="submit"
+                >
+
+                  <svg
+                    class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                    viewBox="0 0 512 512"
+                    aria-hidden="true"
+                  >
+                    <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"></path>
+                  </svg>
+
+                  Notify me
+
+                </button>
+
+              </div>
+
+
+              <!-- Privacy -->
+
+              <div class="sib-form-block">
+
+                <p class="fine">
+
+                  You can unsubscribe at any time.
+                  <a href="privacy.html">Privacy Policy</a>
+
+                </p>
+
+                <div class="sib-form__declaration">
+
+                  <p>
+                    By submitting this form, you agree to receive occasional
+                    notifications about new tools and products. Your data will be
+                    processed according to our
+                    <a href="privacy.html">Privacy Policy</a>.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <!-- Brevo honeypot -->
+
+              <input
+                type="text"
+                name="email_address_check"
+                value=""
+                class="input--hidden"
+                tabindex="-1"
+                autocomplete="off"
+              >
+
+              <!-- Brevo hidden fields -->
+
+              <input
+                type="hidden"
+                name="locale"
+                value="en"
+              >
+
+              <input
+                type="hidden"
+                name="html_type"
+                value="simple"
+              >
+
+            </form>
+
+          </div>
 
         </div>
 
-        <p class="fine">
-          Optional. You can unsubscribe at any time.
-          <a href="privacy.html">Privacy Policy</a>
-        </p>
+      </div>
 
-        <!-- GDPR / Brevo declaration -->
-        <div class="sib-form__declaration">
-          <p>
-            By submitting this form, you agree to receive occasional
-            notifications about new tools and products. Your data will be
-            processed according to our
-            <a href="privacy.html">Privacy Policy</a>.
-          </p>
-        </div>
-
-        <!-- Honeypot -->
-        <input
-          type="text"
-          name="email_address_check"
-          value=""
-          tabindex="-1"
-          autocomplete="off"
-          style="display:none !important;"
-        >
-
-        <input type="hidden" name="locale" value="en">
-        <input type="hidden" name="html_type" value="simple">
-
-      </form>
+      <!-- End Brevo Form -->
 
     </div>
-
-  </div>
-
-</div>
 
   </div>
 
 </section>
-```
+
 
 
 
@@ -733,4 +848,4 @@
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body>
 </html>
-```
+

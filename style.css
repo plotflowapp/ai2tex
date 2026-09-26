@@ -531,100 +531,6 @@ p {
 
 
 /* =========================
-   DARK SECTION
-   ========================= */
-
-.dark {
-  background: #0F172A;
-  color: #fff;
-}
-
-.dark .eyebrow {
-  background: rgba(255,255,255,.10);
-  color: #fff;
-}
-
-.dark .section-intro {
-  color: #CBD5E1;
-}
-
-.result {
-  display: grid;
-  grid-template-columns: 1fr 40px 1fr;
-  gap: 22px;
-  align-items: center;
-  margin-top: 55px;
-}
-
-.result-card {
-  background: #111C2D;
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: 18px;
-  padding: 16px;
-}
-
-.result-card small {
-  color: #94A3B8;
-  letter-spacing: .12em;
-}
-
-.render {
-  height: 300px;
-  margin: 12px 0;
-  border-radius: 12px;
-  background: radial-gradient(circle at 45% 40%,#7b838c,#4c5560 35%,#202936 72%);
-  position: relative;
-  overflow: hidden;
-}
-
-.render:before {
-  content: "";
-  position: absolute;
-  inset: 55px 25%;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%,#dbe0e5,#7d858e 30%,#424b56 68%,#222b37);
-}
-
-.render:after {
-  content: "";
-  position: absolute;
-  inset: 55px 22%;
-  border-radius: 50%;
-  background:
-    repeating-linear-gradient(
-      12deg,
-      transparent 0 14px,
-      rgba(255,255,255,.18) 15px 16px
-    ),
-    repeating-linear-gradient(
-      80deg,
-      transparent 0 18px,
-      rgba(255,255,255,.12) 19px 20px
-    );
-}
-
-.clean-render:after {
-  opacity: .08;
-}
-
-.result-card b {
-  display: block;
-}
-
-.result-card span {
-  font-size: 13px;
-  color: #94A3B8;
-}
-
-.result > i {
-  font-style: normal;
-  font-size: 28px;
-  color: #94A3B8;
-  text-align: center;
-}
-
-
-/* =========================
    DOWNLOAD
    ========================= */
 
@@ -681,7 +587,7 @@ p {
   padding: 36px;
 }
 
-.email label[for=email] {
+.email label[for="EMAIL"] {
   font-weight: 600;
   font-size: 14px;
   display: block;
@@ -691,6 +597,10 @@ p {
 .email-row {
   display: flex;
   gap: 12px;
+}
+
+.email-row button {
+  cursor: pointer;
 }
 
 .email-row input {

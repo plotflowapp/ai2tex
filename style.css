@@ -1174,6 +1174,12 @@ tr:last-child td {
   text-decoration: underline;
 }
 
+#sib-form .entry__error {
+  color: #B3261E !important;
+  font-size: 13px !important;
+  margin-top: 6px !important;
+}
+
 #success-message,
 #error-message {
   margin-bottom: 20px !important;

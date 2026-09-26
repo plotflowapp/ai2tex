@@ -461,10 +461,6 @@
      OPTIONAL EMAIL
      ========================= -->
 
-<!-- =========================
-     OPTIONAL EMAIL
-     ========================= -->
-
 <section class="section">
 
   <div class="container two">
@@ -845,6 +841,23 @@
 
 
 <script src="script.js"></script>
+
+<!-- Brevo form config: required by main.js (validation messages, locale, success-message behavior). Do not remove. -->
+<script>
+window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+window.LOCALE = 'en';
+window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
+window.translation = {
+  common: {
+    selectedList: '{quantity} list selected',
+    selectedLists: '{quantity} lists selected'
+  }
+};
+var AUTOHIDE = Boolean(0);
+</script>
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body>
 </html>

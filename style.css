@@ -1136,17 +1136,27 @@ tr:last-child td {
 
 #sib-form .entry__choice {
   margin-top: 18px !important;
+  padding-left: 0 !important;
+  text-indent: 0 !important;
 }
 
 #sib-form .entry__choice label {
   display: flex !important;
-  align-items: flex-start;
-  gap: 10px;
+  align-items: flex-start !important;
+  gap: 10px !important;
 }
 
-#sib-form .entry__choice input {
-  margin-top: 4px;
-  flex: 0 0 auto;
+#sib-form .entry__choice input[type="checkbox"] {
+  appearance: auto !important;
+  -webkit-appearance: auto !important;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  flex: 0 0 18px !important;
+  margin: 3px 0 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  opacity: 1 !important;
 }
 
 .sib-form__declaration {

@@ -455,6 +455,7 @@
 
 
 
+<```html
 <!-- =========================
      OPTIONAL EMAIL
      ========================= -->
@@ -479,16 +480,22 @@
 
     <div class="email">
 
-      <form id="updates-form">
+      <form
+        id="sib-form"
+        method="POST"
+        action="https://bb0e4446.sibforms.com/serve/MUIFADQ187X6BZ2CYN0jaoVft4nykrxQxyWn6cYfE_1GCiZbPI3h62pEUKN2qA17ZeZhsiv5QgfLhsUdt-itrj6-jcw4_4lx9CpMTcUTWqKpTQVwbwhR9dT8EetbVxxxA2qWoDfX5962d-2M1NIiGCYiR2AEPOoaHLwodsPH00kIl6E111HXfkzBx4r4m2wmlsTiFbfN1ZaOknqJxQ=="
+      >
 
-        <label for="email">Email address</label>
+        <label for="EMAIL">Email address</label>
 
         <div class="email-row">
 
           <input
-            id="email"
+            id="EMAIL"
+            name="EMAIL"
             type="email"
             placeholder="you@example.com"
+            autocomplete="email"
             required
           >
 
@@ -501,10 +508,16 @@
 
         <label class="consent">
 
-          <input id="consent" type="checkbox">
+          <input
+            type="checkbox"
+            id="OPT_IN"
+            name="OPT_IN"
+            value="1"
+            required
+          >
 
           <span>
-            <b>Notify me about new tools and products.</b>
+            Notify me about new tools and products.
           </span>
 
         </label>
@@ -515,7 +528,18 @@
           <a href="privacy.html">Privacy Policy</a>
         </p>
 
-        <div id="message"></div>
+
+        <input
+          type="text"
+          name="email_address_check"
+          value=""
+          class="input--hidden"
+          tabindex="-1"
+          autocomplete="off"
+        >
+
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="html_type" value="simple">
 
       </form>
 
@@ -524,6 +548,8 @@
   </div>
 
 </section>
+```
+
 
 
 

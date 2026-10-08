@@ -5,20 +5,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta name="description" content="ai2tex is a free 3ds Max tool that bakes Diffuse / Base Color from AI-generated or high-poly models onto a retopologized mesh, using its existing UV layout.">
+<meta name="description" content="ai2tex is a free 3ds Max tool for retopologizing AI-generated models with built-in 3ds Max Retopology, then baking Diffuse / Base Color and Normal maps onto a UV-mapped target.">
 
-<title>ai2tex — Free 3ds Max Texture Transfer &amp; Baking Tool</title>
+<title>ai2tex — Free 3ds Max Retopology &amp; Texture Transfer Tool</title>
 
 <link rel="canonical" href="https://ai2tex.toritex.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ai2tex">
-<meta property="og:title" content="ai2tex — Free 3ds Max Texture Transfer &amp; Baking Tool">
-<meta property="og:description" content="Free 3ds Max tool that bakes Diffuse / Base Color from AI-generated or high-poly models onto a retopologized mesh, using its existing UV layout.">
+<meta property="og:title" content="ai2tex — Free 3ds Max Retopology &amp; Texture Transfer Tool">
+<meta property="og:description" content="Free 3ds Max tool for retopologizing AI-generated models with built-in 3ds Max Retopology, then baking Diffuse / Base Color and Normal maps onto a UV-mapped target.">
 <meta property="og:url" content="https://ai2tex.toritex.com/">
 <meta property="og:image" content="https://ai2tex.toritex.com/assets/ai2tex-after.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ai2tex — Free 3ds Max Texture Transfer &amp; Baking Tool">
-<meta name="twitter:description" content="Free 3ds Max tool that bakes Diffuse / Base Color from AI-generated or high-poly models onto a retopologized mesh, using its existing UV layout.">
+<meta name="twitter:title" content="ai2tex — Free 3ds Max Retopology &amp; Texture Transfer Tool">
+<meta name="twitter:description" content="Free 3ds Max tool for retopologizing AI-generated models with built-in 3ds Max Retopology, then baking Diffuse / Base Color and Normal maps onto a UV-mapped target.">
 <meta name="twitter:image" content="https://ai2tex.toritex.com/assets/ai2tex-after.jpg">
 
 <link rel="icon" href="assets/logo-light.svg" type="image/svg+xml">
@@ -33,7 +33,7 @@
   "@type": "SoftwareApplication",
   "name": "ai2tex",
   "url": "https://ai2tex.toritex.com/",
-  "description": "Free 3ds Max tool that bakes Diffuse / Base Color from AI-generated or high-poly models onto a retopologized mesh, using its existing UV layout.",
+  "description": "Free 3ds Max tool for retopologizing AI-generated models with built-in 3ds Max Retopology, then baking Diffuse / Base Color and Normal maps onto a UV-mapped target.",
   "applicationCategory": "DesignApplication",
   "operatingSystem": "Windows",
   "downloadUrl": "https://ai2tex.toritex.com/downloads/ai2tex.zip",
@@ -87,11 +87,12 @@
 
       <div class="eyebrow">FREE 3DS MAX TOOL</div>
 
-      <h1>Transfer the texture. Keep the optimized mesh.</h1>
+      <h1>From AI model to optimized, textured mesh.</h1>
 
       <p class="lead">
-        ai2tex bakes Diffuse / Base Color from an original model onto a
-        retopologized target using the target's existing UV layout.
+        ai2tex can create a retopologized target using 3ds Max's built-in
+        Retopology modifier, then bake Diffuse / Base Color and Normal maps
+        onto its UVs.
       </p>
 
       <div class="actions">
@@ -111,7 +112,7 @@
     <div class="hero-visual">
 
       <div class="visual-title">
-        <span>SOURCE → TARGET</span>
+        <span>AI SOURCE → RETOPOLOGY → TARGET</span>
         <span>TEXTURE TRANSFER</span>
       </div>
 
@@ -139,7 +140,7 @@
           </div>
 
           <div class="model-label">Optimized / Textured</div>
-          <div class="model-note">Retopology + texture transferred</div>
+          <div class="model-note">Retopology + UVs + maps baked</div>
 
         </div>
 
@@ -163,11 +164,11 @@
 
     <div class="eyebrow">THE PROBLEM</div>
 
-    <h2>AI geometry can be useful — but its UVs often aren't.</h2>
+    <h2>AI geometry can be useful — but it's rarely ready for production.</h2>
 
     <p class="body">
       AI-generated models from tools such as Hunyuan or Tripo can arrive
-      with a mosaic-like UV layout and a difficult-to-work-with mesh.
+      with dense, irregular geometry and a difficult-to-work-with UV layout.
       After retopology and a new UV unwrap, the original texture no longer
       fits the new model.
     </p>
@@ -190,7 +191,7 @@
 
       <div class="flow-card">
         <b>New UV</b>
-        <span>Texture needs to be baked again</span>
+        <span>Original detail needs to be baked</span>
       </div>
 
     </div>
@@ -213,21 +214,27 @@
 
       <div class="eyebrow">THE WORKFLOW</div>
 
-      <h2>Let 3ds Max do the baking work.</h2>
+      <h2>Retopology and baking in one workflow.</h2>
 
       <p class="body">
-        ai2tex automates the built-in 3ds Max Projection + Render To Texture
-        workflow. It sets up the projection, handles the temporary scene
-        changes, bakes the color and cleans up afterwards.
+        ai2tex can use the built-in 3ds Max Retopology modifier to create
+        a new Target from your Source. After you unwrap the Target,
+        ai2tex automates Projection + Render To Texture and transfers
+        the selected maps.
       </p>
 
       <ul class="clean">
         <li>Pick the original textured Source.</li>
-        <li>Pick the retopologized Target.</li>
-        <li>Use the Target's existing UV channel.</li>
-        <li>Adjust Ray offset if necessary.</li>
-        <li>Press Bake.</li>
+        <li>Click <b>Retopology</b> to create the Target — no third-party retopology plugin required.</li>
+        <li>Unwrap the new Target.</li>
+        <li>Choose Diffuse, Normal, or both.</li>
+        <li>Press <b>Bake</b>.</li>
       </ul>
+
+      <p class="body">
+        Already using Quad Remesher or another retopology solution?
+        You can skip the built-in Retopology step and pick your own Target.
+      </p>
 
     </div>
 
@@ -257,11 +264,11 @@
 
     <div class="eyebrow">FEATURES</div>
 
-    <h2>Everything around the bake is handled for you.</h2>
+    <h2>From retopology to baked maps, with less setup.</h2>
 
     <p class="body">
-      The tool is intentionally focused: one Source, one Target,
-      one Diffuse / Base Color bake at a time.
+      ai2tex keeps the workflow focused while automating the repetitive
+      parts of retopology and texture baking in 3ds Max.
     </p>
 
 
@@ -271,11 +278,11 @@
 
         <strong>01</strong>
 
-        <h3>Source / Target picking</h3>
+        <h3>Built-in Retopology</h3>
 
         <p>
-          Select the two meshes directly in 3ds Max.
-          Clear resets the selection.
+          Create a new retopologized Target directly from the Source
+          using the 3ds Max Retopology modifier.
         </p>
 
       </article>
@@ -285,11 +292,11 @@
 
         <strong>02</strong>
 
-        <h3>Automatic Ray offset</h3>
+        <h3>Diffuse + Normal baking</h3>
 
         <p>
-          ai2tex calculates a starting value from the object's size.
-          Fine-tune it when needed.
+          Transfer Diffuse / Base Color and bake Normal detail from
+          the Source geometry onto the Target.
         </p>
 
       </article>
@@ -299,11 +306,11 @@
 
         <strong>03</strong>
 
-        <h3>UV check</h3>
+        <h3>Automatic Ray offset</h3>
 
         <p>
-          The selected Target UV channel is checked and the script can
-          report where an existing unwrap is found.
+          ai2tex calculates a starting value from the object size.
+          Fine-tune it when needed.
         </p>
 
       </article>
@@ -316,8 +323,8 @@
         <h3>Clean scene handling</h3>
 
         <p>
-          Temporary Projection, material and renderer changes are
-          restored after the bake.
+          Projection, material and renderer changes used during baking
+          are restored after the operation.
         </p>
 
       </article>
@@ -342,15 +349,16 @@
 
       <div class="eyebrow">WHAT IS TRANSFERRED</div>
 
-      <h2>Color, not the whole material stack.</h2>
+      <h2>Diffuse and Normal — focused on the maps you need.</h2>
 
       <p class="body">
-        The current version is deliberately limited to Diffuse / Base Color.
-        Geometry and UVs are not changed.
+        ai2tex can bake the Source's visible color and geometric normal
+        detail onto the Target's existing UV layout.
       </p>
 
       <ul class="clean">
         <li>Diffuse / Base Color</li>
+        <li>Normal map</li>
         <li>Standard Material diffuse + bitmap</li>
         <li>Physical Material Base Color + bitmap</li>
         <li>Multi/Sub-Object using supported Standard / Physical sub-materials</li>
@@ -364,19 +372,17 @@
       <small>NOT CURRENTLY TRANSFERRED</small>
 
       <div class="tags">
-        <span class="tag">Normal</span>
         <span class="tag">Roughness</span>
         <span class="tag">Metallic</span>
         <span class="tag">Opacity</span>
         <span class="tag">Emission</span>
         <span class="tag">AO</span>
-        <span class="tag">UV unwrap</span>
-        <span class="tag">Geometry</span>
       </div>
 
       <p class="body">
-        The Target keeps its existing geometry and UV layout.
-        A new Standard Material can be assigned to the Target after baking.
+        ai2tex does not transfer the complete material stack.
+        The Target's UVs are used for baking; the Retopology step
+        creates geometry but does not unwrap it.
       </p>
 
     </div>
@@ -397,18 +403,18 @@
 
     <div class="eyebrow">OUTPUT</div>
 
-    <h2>Predictable output, with no silent overwrites.</h2>
+    <h2>Predictable output, with useful export options.</h2>
 
 
     <div class="cards four">
 
       <article class="card">
 
-        <h3>PNG / JPG / TGA</h3>
+        <h3>Diffuse + Normal</h3>
 
         <p>
-          PNG is the default. JPG is baked at quality 100 for the operation.
-          TGA is also available.
+          Choose Diffuse, Normal, or both. Normal maps are saved as PNG,
+          with an optional green-channel flip for DirectX / Unreal workflows.
         </p>
 
       </article>
@@ -431,8 +437,9 @@
         <h3>_TexBake</h3>
 
         <p>
-          The output is saved beside the first found Source texture when
-          possible, using the <span class="code">_TexBake</span> suffix.
+          Baked textures use the <span class="code">_TexBake</span>
+          naming pattern and are saved without silently overwriting
+          existing files.
         </p>
 
       </article>
@@ -440,12 +447,11 @@
 
       <article class="card">
 
-        <h3>No overwriting</h3>
+        <h3>Optional FBX package</h3>
 
         <p>
-          Existing files are never overwritten. Repeated bakes receive
-          <span class="code">_1</span>, <span class="code">_2</span>,
-          and so on.
+          Export the Target as FBX together with its baked textures
+          into a dedicated package folder after the bake.
         </p>
 
       </article>
@@ -802,7 +808,7 @@
       <h2>Need the details?</h2>
 
       <p class="body">
-        Installation, workflow, parameters, supported materials,
+        Retopology, baking workflow, parameters, supported materials,
         output rules, troubleshooting and known limitations.
       </p>
 
@@ -895,4 +901,3 @@ var AUTOHIDE = Boolean(1);
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body>
 </html>
-

@@ -45,6 +45,30 @@
   }
 }
 </script>
+
+<style>
+/* Click-to-zoom for the two AI2Tex before/after images */
+.models .model-image img { cursor: zoom-in; }
+.ai2tex-lightbox {
+  position: fixed; inset: 0; z-index: 99999; display: none;
+  align-items: center; justify-content: center; padding: 24px;
+  background: rgba(0, 0, 0, .92); cursor: zoom-out;
+}
+.ai2tex-lightbox.is-open { display: flex; }
+.ai2tex-lightbox img {
+  display: block; width: auto; height: auto;
+  max-width: min(96vw, 1600px); max-height: 94vh;
+  object-fit: contain; cursor: default;
+  box-shadow: 0 8px 40px rgba(0,0,0,.35);
+}
+.ai2tex-lightbox-close {
+  position: absolute; top: 12px; right: 20px; border: 0;
+  color: white; background: transparent; font-size: 38px;
+  line-height: 1; cursor: pointer; padding: 8px 12px;
+}
+@media (max-width: 600px) { .ai2tex-lightbox { padding: 10px; } }
+</style>
+
 </head>
 
 
@@ -899,5 +923,55 @@ window.translation = {
 var AUTOHIDE = Boolean(1);
 </script>
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+<div class="ai2tex-lightbox" id="ai2tex-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged model image">
+  <button class="ai2tex-lightbox-close" type="button" aria-label="Close enlarged image">&times;</button>
+  <img src="" alt="">
+</div>
+<script>
+(() => {
+  const lightbox = document.getElementById('ai2tex-lightbox');
+  const enlarged = lightbox.querySelector('img');
+  const closeButton = lightbox.querySelector('.ai2tex-lightbox-close');
+  const images = document.querySelectorAll('.models .model-image img');
+  let previousFocus = null;
+
+  function openImage(image) {
+    previousFocus = image;
+    enlarged.src = image.currentSrc || image.src;
+    enlarged.alt = image.alt || 'Enlarged model image';
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    closeButton.focus();
+  }
+  function closeImage() {
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+    enlarged.src = '';
+    if (previousFocus) previousFocus.focus?.();
+  }
+
+  images.forEach(image => {
+    image.tabIndex = 0;
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', (image.alt || 'Model image') + ' — click to enlarge');
+    image.addEventListener('click', () => openImage(image));
+    image.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openImage(image);
+      }
+    });
+  });
+  closeButton.addEventListener('click', closeImage);
+  lightbox.addEventListener('click', event => {
+    if (event.target === lightbox) closeImage();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeImage();
+  });
+})();
+</script>
+
 </body>
 </html>

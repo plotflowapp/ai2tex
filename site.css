@@ -1,0 +1,152 @@
+/* ==========================================================
+   ai2tex layout refinements
+   Loaded after style.css on every page.
+   Only tightens vertical spacing, so the long empty gaps go away
+   while the look of the site stays the same.
+==========================================================*/
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0 0 16px;
+}
+
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+.hero-grid {
+  gap: 56px;
+}
+
+.lead {
+  margin-top: 20px;
+}
+
+.actions {
+  margin-top: 32px;
+}
+
+.meta {
+  margin-top: 36px;
+}
+
+
+/* ---------- Sections ---------- */
+
+.section {
+  padding: 84px 0;
+}
+
+.clean {
+  margin-top: 22px;
+}
+
+.flow {
+  margin-top: 36px;
+}
+
+.cards {
+  margin-top: 36px;
+  gap: 24px;
+}
+
+.card {
+  padding: 30px;
+}
+
+.two {
+  gap: 56px;
+}
+
+.download-box {
+  padding: 64px 56px;
+}
+
+.callout {
+  padding: 32px;
+}
+
+
+/* ---------- Documentation ---------- */
+
+.docs-hero {
+  padding-top: 140px;
+  padding-bottom: 48px;
+}
+
+.docs-layout {
+  gap: 56px;
+  padding-top: 48px;
+  padding-bottom: 72px;
+}
+
+.doc section {
+  padding: 0 0 48px;
+  margin-bottom: 48px;
+}
+
+
+/* ---------- Footer ---------- */
+
+.footer {
+  padding: 60px 0 24px;
+}
+
+
+/* ---------- Tablet and mobile ---------- */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 56px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .download-box {
+    padding: 48px 24px;
+  }
+
+  .docs-hero {
+    padding-top: 120px;
+    padding-bottom: 36px;
+  }
+
+  .docs-layout {
+    padding-bottom: 48px;
+  }
+
+  .doc section {
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+  }
+
+  .footer {
+    padding: 48px 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding-top: 108px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+}

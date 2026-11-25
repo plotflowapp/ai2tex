@@ -16,22 +16,23 @@
 
 <meta name="description" content="ai2tex is a free 3ds Max tool for retopologizing AI-generated models with built-in 3ds Max Retopology, then baking Diffuse / Base Color and Normal maps onto a UV-mapped target.">
 
-<title>ai2tex — Free 3ds Max Retopology &amp; Texture Transfer Tool</title>
+<title>ai2tex - Free 3ds Max Retopology &amp; Texture Transfer Tool</title>
 
 <link rel="canonical" href="https://ai2tex.toritex.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ai2tex">
-<meta property="og:title" content="ai2tex — Free 3ds Max Retopology &amp; Texture Transfer Tool">
+<meta property="og:title" content="ai2tex - Free 3ds Max Retopology &amp; Texture Transfer Tool">
 <meta property="og:description" content="Free 3ds Max tool for retopologizing AI-generated models with built-in 3ds Max Retopology, then baking Diffuse / Base Color and Normal maps onto a UV-mapped target.">
 <meta property="og:url" content="https://ai2tex.toritex.com/">
 <meta property="og:image" content="https://ai2tex.toritex.com/assets/ai2tex-after.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ai2tex — Free 3ds Max Retopology &amp; Texture Transfer Tool">
+<meta name="twitter:title" content="ai2tex - Free 3ds Max Retopology &amp; Texture Transfer Tool">
 <meta name="twitter:description" content="Free 3ds Max tool for retopologizing AI-generated models with built-in 3ds Max Retopology, then baking Diffuse / Base Color and Normal maps onto a UV-mapped target.">
 <meta name="twitter:image" content="https://ai2tex.toritex.com/assets/ai2tex-after.jpg">
 
 <link rel="icon" href="assets/logo-light.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="site.css">
 <link
   rel="stylesheet"
   href="https://sibforms.com/forms/end-form/build/sib-styles.css"
@@ -197,7 +198,7 @@
 
     <div class="eyebrow">THE PROBLEM</div>
 
-    <h2>AI geometry can be useful - but it's rarely ready for production.</h2>
+    <h2>AI geometry can be useful - but it's rarely ready for production</h2>
 
     <p class="body">
       AI-generated models from tools such as Hunyuan or Tripo can arrive
@@ -965,7 +966,7 @@ var AUTOHIDE = Boolean(1);
   images.forEach(image => {
     image.tabIndex = 0;
     image.setAttribute('role', 'button');
-    image.setAttribute('aria-label', (image.alt || 'Model image') + ' — click to enlarge');
+    image.setAttribute('aria-label', (image.alt || 'Model image') + ' - click to enlarge');
     image.addEventListener('click', () => openImage(image));
     image.addEventListener('keydown', event => {
       if (event.key === 'Enter' || event.key === ' ') {

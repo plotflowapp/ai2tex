@@ -13,20 +13,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Installation, retopology workflow, baking parameters, supported materials and troubleshooting for ai2tex, the free 3ds Max texture transfer and baking tool.">
-<title>ai2tex Documentation — Retopology, Baking &amp; Troubleshooting</title>
+<title>ai2tex Documentation - Retopology, Baking &amp; Troubleshooting</title>
 <link rel="canonical" href="https://ai2tex.toritex.com/documentation.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="ai2tex">
-<meta property="og:title" content="ai2tex Documentation — Retopology, Baking &amp; Troubleshooting">
+<meta property="og:title" content="ai2tex Documentation - Retopology, Baking &amp; Troubleshooting">
 <meta property="og:description" content="Installation, retopology workflow, baking parameters, supported materials and troubleshooting for ai2tex, the free 3ds Max texture transfer and baking tool.">
 <meta property="og:url" content="https://ai2tex.toritex.com/documentation.html">
 <meta property="og:image" content="https://ai2tex.toritex.com/assets/a2texui.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ai2tex Documentation — Retopology, Baking &amp; Troubleshooting">
+<meta name="twitter:title" content="ai2tex Documentation - Retopology, Baking &amp; Troubleshooting">
 <meta name="twitter:description" content="Installation, retopology workflow, baking parameters, supported materials and troubleshooting for ai2tex, the free 3ds Max texture transfer and baking tool.">
 <meta name="twitter:image" content="https://ai2tex.toritex.com/assets/a2texui.jpg">
 <link rel="icon" href="assets/logo-light.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="site.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -320,16 +321,16 @@
       <tbody>
         <tr><td><b>Pick Source</b></td><td>Any geometry</td><td>None</td><td>Selects the original model with the source texture.</td></tr>
         <tr><td><b>Pick Target</b></td><td>Any geometry</td><td>None</td><td>Selects the retopologized model receiving the bake.</td></tr>
-        <tr><td><b>Retopology</b></td><td>Button</td><td>—</td><td>Copies the Source as <span class="code">&lt;Source&gt;_retopo</span>, applies the 3ds Max Retopology modifier, collapses the result to Editable Poly, and sets it as Target.</td></tr>
-        <tr><td><b>Target faces</b></td><td>Modifier value</td><td>—</td><td>Controls the target face count used by the Retopology modifier.</td></tr>
-        <tr><td><b>Quad tolerance %</b></td><td>Modifier value</td><td>—</td><td>Controls the quad preference/tolerance used by Retopology.</td></tr>
+        <tr><td><b>Retopology</b></td><td>Button</td><td>-</td><td>Copies the Source as <span class="code">&lt;Source&gt;_retopo</span>, applies the 3ds Max Retopology modifier, collapses the result to Editable Poly, and sets it as Target.</td></tr>
+        <tr><td><b>Target faces</b></td><td>Modifier value</td><td>-</td><td>Controls the target face count used by the Retopology modifier.</td></tr>
+        <tr><td><b>Quad tolerance %</b></td><td>Modifier value</td><td>-</td><td>Controls the quad preference/tolerance used by Retopology.</td></tr>
         <tr><td><b>Collapse to Editable Poly</b></td><td>Automatic</td><td>On</td><td>Applies the Retopology result so the generated Target becomes editable geometry.</td></tr>
-        <tr><td><b>Clear</b></td><td>Button</td><td>—</td><td>Clears Source and Target.</td></tr>
+        <tr><td><b>Clear</b></td><td>Button</td><td>-</td><td>Clears Source and Target.</td></tr>
         <tr><td><b>Bake maps</b></td><td>diffuse / normal / diffuse + normal</td><td>diffuse map</td><td>Selects which maps are baked.</td></tr>
         <tr><td><b>UV channel</b></td><td>1–99</td><td>1</td><td>Target UV channel used for the bake. If the channel has no unwrap, the script reports where an unwrap exists.</td></tr>
         <tr><td><b>Padding px</b></td><td>0–64</td><td>16</td><td>Extends color beyond UV cluster edges to reduce seams and gaps.</td></tr>
         <tr><td><b>Ray offset</b></td><td>≥ 0</td><td>Auto</td><td>Distance used when looking from the Target toward the Source. Depends on object size.</td></tr>
-        <tr><td><b>Auto</b></td><td>Button</td><td>—</td><td>Sets a starting Ray offset from object size.</td></tr>
+        <tr><td><b>Auto</b></td><td>Button</td><td>-</td><td>Sets a starting Ray offset from object size.</td></tr>
         <tr><td><b>Map size</b></td><td>512 / 1024 / 2048 / 4096 / 8192</td><td>2048</td><td>Square output texture size.</td></tr>
         <tr><td><b>Format</b></td><td>png / jpg / tga</td><td>png</td><td>Output file format.</td></tr>
         <tr><td><b>Assign new material to Target</b></td><td>On / Off</td><td>On</td><td>Creates and assigns a new Standard Material with the baked diffuse map and, when a normal map is baked, places it in the Bump slot.</td></tr>

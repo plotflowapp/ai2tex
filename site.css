@@ -1,7 +1,7 @@
 /* ==========================================================
    ai2tex layout refinements
    Loaded after style.css on every page.
-   Only tightens vertical spacing, so the long empty gaps go away
+   Tightens vertical spacing so the long empty gaps go away
    while the look of the site stays the same.
 ==========================================================*/
 
@@ -15,6 +15,15 @@ h1 {
 
 h2 {
   margin: 0 0 16px;
+}
+
+/* Spacing between text blocks (the global reset removes default margins) */
+.body {
+  margin-top: 16px;
+}
+
+p + h2 {
+  margin-top: 32px;
 }
 
 
